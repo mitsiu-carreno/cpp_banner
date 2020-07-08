@@ -32,7 +32,7 @@ $ make hardclean
 ```
 
 ## Visual Studio Integration
-1. Clone
+* Clone
   1. Tareas iniciales -> Continuar sin código
   2. Ver -> Team explorer
   3. Repositorios GIT locales -> Clonar
@@ -52,20 +52,69 @@ $ make hardclean
   17. Directorios de archivos de inclusión -> Editar
   18. Nueva línea -> Repo_folder/include
 
-2. Add existing files to workplace
+* Add existing files to workplace
   1. Ver -> Explorador de soluciones -> Alternar vistas -> vs_sln.sln
   2. Archivos de origen -> Agregar -> Elemento existente
 
-3. Add new files to workplace
+* Add new files to workplace
   1. Ver -> Explorador de soluciones -> Alternar vistas -> cpp_banner
   2. Seleccionar carpeta (src/ include/) -> Agregar -> Nuevo archivo
   3. Ver -> Explorador de soluciones -> Alternar vistas -> vs_sln.sln
   4. Archivos de origen -> Agregar -> Elemento existente
 
-4. Git integration
+* Git integration (pull)
+  1. Ver -> Team explorer -> Sincronización
+  2. Rama: develop -> Sincronizar
+
+* Git integration (push)
   1. Ver -> Team explorer -> Cambios
   2. Rama: develop -> Enter a message (descripción de commit) -> Confirmar todo
   3. Ver -> Team explorer -> Sincronización -> Confirmaciones de salida -> Insertar
+
+## GIT 101
+### Setup
+Clone repo (only once)
+```bash
+$ git clone https://github.com/mitsiu-carreno/cpp_banner.git
+```
+
+Change branch (working branch is "develop")
+```bash
+$ git checkout develop
+```
+
+### Get everyone's changes
+Update local repo (get everyone else changes)
+```bash
+$ git pull origin develop
+```
+
+### What did I just changed?
+Check status of local files 
+```bash
+$ git status
+```
+
+Check changes on specific file
+```bash
+$ git diff [path/to/file]
+```
+
+### Share my changes
+Select files to commit (local changes to send everyone)
+```bash
+$ git add --all
+```
+
+Add description of changes
+```bash
+$ git commit -m'DESCRIPTION HERE'
+```
+
+Share my changes
+```bash
+$ git push origin develop
+``` 
 
 ## Art
 @ildanilo
