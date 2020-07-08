@@ -111,6 +111,11 @@ Add description of changes
 $ git commit -m'DESCRIPTION HERE'
 ```
 
+Get everyone's changes (just in case)
+```bash
+$ git pull origin develop
+```
+
 Share my changes
 ```bash
 $ git push origin develop
