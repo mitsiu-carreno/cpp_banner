@@ -1,8 +1,14 @@
 #include <iostream>
-
-void fun();
+#include <string>
 
 int main(){
-  std::cout << "Banner working\n";
+  
+  std::string input {"aei"};
+  std::cout << &input << "\n";
+  
+  for(char e : input){
+    std::cout << e << "\n";
+  }
+  
   return 0;
 }
