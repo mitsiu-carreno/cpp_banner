@@ -1,5 +1,5 @@
-#ifndef INPUTCHECK_H
-#define INPUTCHECK_H
+#ifndef LETTERS_H
+#define LETTERS_H
 
 bool Letters();
 
