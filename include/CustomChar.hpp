@@ -4,6 +4,7 @@
 #include<string>
 
 struct CustomChar{
+	int ancho;
 	std::string linea1;
 	std::string linea2;
 	std::string linea3;
