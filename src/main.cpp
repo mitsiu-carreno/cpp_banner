@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "Letters.hpp"
 
 int main(){
   
@@ -9,6 +10,8 @@ int main(){
   for(char e : input){
     std::cout << e << "\n";
   }
+  
+  Letters();
   
   return 0;
 }
