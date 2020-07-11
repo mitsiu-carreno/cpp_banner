@@ -1,57 +1,47 @@
 #include <iostream>
 #include <array>
+#include "CustomChar.hpp"
 
-
-struct CustomChar{
-    int ancho;
-	std::string linea1;
-	std::string linea2;
-	std::string linea3;
-	std::string linea4;
-	std::string linea5;
-	std::string linea6;
-	std::string linea7;
-};
-
-int main (){
+ main Letters(){
 
 
 CustomChar a {};
 a.ancho=6;
-a.linea1= ".        .\n";
-a.linea2 =".  _____ .\n";
-a.linea3 = ". / ___ \\.\n";
-a.linea4 = "./ /__/ /.\n";
-a.linea5 = ".\\____;_/.\n";
-a.linea6=".        .\n";
-a.linea7=".        .\n";
+a.linea1= ".         .\n";
+a.linea2 =".  ______ .\n";
+a.linea3 = ". / ___  /.\n";
+a.linea4 = "./ /__/ / .\n";
+a.linea5 = ".\\____;_/ .\n";
+a.linea6=".         .\n";
+a.linea7=".         .\n";
 
-CustomChar a_ {};
-a_.ancho=6;
-a_.linea1= ".         .\n";
-a_.linea2 =".  ______ .\n";
-a_.linea3 = ". / ___  /.\n";
-a_.linea4 = "./ /__/ / .\n";
-a_.linea5 = ".\\____;_/ .\n";
-a_.linea6=".         .\n";
-a_.linea7=".         .\n";
+CustomChar b {};
+b.ancho=6;
+b.linea1= ".      ___ .\n";
+b.linea2 =".  ___/   /.\n";
+b.linea3 = ". / __   / .\n";
+b.linea4 = "./ /_/  /  .\n";
+b.linea5 = ".\\____;_/  .\n";
+b.linea6=".          .\n";
+b.linea7=".          .\n";
 
+CustomChar d {};
+d.ancho=6;
+d.linea1= ".      ___ .\n";
+d.linea2 =".  ___/   /.\n";
+d.linea3 = ". / __   / .\n";
+d.linea4 = "./ /_/  /  .\n";
+d.linea5 = ".\\____;_/  .\n";
+d.linea6=".          .\n";
+d.linea7=".          .\n";
 
-std::cout<<a.linea1;
-std::cout<<a.linea2;
-std::cout<<a.linea3;
-std::cout<<a.linea4;
-std::cout<<a.linea5;
-std::cout<<a.linea6;
-std::cout<<a.linea7;
-
-std::cout<<a_.linea1;
-std::cout<<a_.linea2;
-std::cout<<a_.linea3;
-std::cout<<a_.linea4;
-std::cout<<a_.linea5;
-std::cout<<a_.linea6;
-std::cout<<a_.linea7;
+std::cout<<b.linea1;
+std::cout<<b.linea2;
+std::cout<<b.linea3;
+std::cout<<b.linea4;
+std::cout<<b.linea5;
+std::cout<<b.linea6;
+std::cout<<b.linea7;
 
 
 return 0; 
