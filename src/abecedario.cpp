@@ -2,7 +2,7 @@
 #include <array>
 #include "CustomChar.hpp"
 
-int Letters (){
+int PrintLetters (){
 
 CustomChar a {};
 a.ancho=6;

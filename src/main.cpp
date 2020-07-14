@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Letters.hpp"
+#include "abecedario.hpp"
 
 int main(){
   
@@ -11,7 +11,7 @@ int main(){
     std::cout << e << "\n";
   }
   
-  Letters();
+  PrintLetters();
   
   return 0;
 }
