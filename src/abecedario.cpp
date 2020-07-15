@@ -1,5 +1,6 @@
 #include <iostream>
 #include <array>
+#include<string>
 #include "CustomChar.hpp"
 
 /*
@@ -31,6 +32,17 @@
 +/________/
 +
  */
+
+std::array<std::string, 7> CustomCharTwo {
+	std::string first_line,
+	std::string second_line,
+	std::string third_line,
+	std::string fourth_line,
+	std::string fifth_line,
+	std::string sixth_line,
+	std::string seventh_line,
+}
+
 
 int PrintLetters (){
 

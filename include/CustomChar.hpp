@@ -2,6 +2,7 @@
 #define CUSTOMCHAR_H
 
 #include<string>
+#include<array>
 
 struct CustomChar{
 	int ancho;
