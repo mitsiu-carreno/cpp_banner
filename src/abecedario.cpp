@@ -48,19 +48,19 @@ int PrintLetters (){
 		*/
 	};
 
-	std::array <std::string, 7> Letra_a {
-		"             ";
-		"    ,-------,";
-		"   /  ___   /";
-		"  /  /  /  /";
-		" /   `-´  /";
-		"\\____;__;";
-		"           ";	
+	std::array <std::string, 7> letra_a {
+		"             ",
+		"    ,-------,",
+		"   /  ___   /",
+		"  /  /  /  /",
+		" /   `-´  /",
+		" \\____;__;",
+		"           ",	
 
 	};
 
-	for (std::size_t i{0};i<num.size();++i){
- 	 std::cout<< Letra_a[i]<<"\n";
+	for (std::size_t i{0};i < letra_a.size();++i){
+ 	 std::cout<< letra_a[i]<<"\n";
 	}
 	
 	return 0; 
