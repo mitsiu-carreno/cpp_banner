@@ -1,7 +1,8 @@
+#include "constants.hpp"
+#include "CustomChar.hpp"
 #include <iostream>
 #include <array>
 #include<string>
-#include "CustomChar.hpp"
 
 /*
                                     __  __                                            
@@ -37,7 +38,7 @@
 
 int PrintLetters (){
 	
-	std::array<std::string, 7> CustomCharTwo {
+	std::array<std::string, constants::rows_per_letter> CustomCharTwo {
 		/*std::string first_line,
 		std::string second_line,
 		std::string third_line,
@@ -48,7 +49,7 @@ int PrintLetters (){
 		*/
 	};
 
-	std::array <std::string, 7> letra_a {
+	std::array <std::string, constants::rows_per_letter> letra_a {
 		"             ",
 		"    ,-------,",
 		"   /  ___   /",
