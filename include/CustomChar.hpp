@@ -16,13 +16,13 @@ struct CustomChar{
 };
 
 std::array<string,7> CustomCharTwo {
-	std::first_line;
-	std::second_line;
-	std::third_line;
-	std::fourth_line;
-	std::fifth_line;
-	std::sixth_line;
-	std::seventh_line;
+	std::string first_line;
+	std::string second_line;
+	std::string third_line;
+	std::string fourth_line;
+	std::string fifth_line;
+	std::string sixth_line;
+	std::string seventh_line;
 }
 
 #endif
