@@ -1,5 +1,6 @@
 #include "processInput.hpp"
-#include "abecedario.hpp"
+#include "processLetters.hpp"
+#include "abc.hpp"
 #include "utils.hpp"
 
 #include <iostream>
