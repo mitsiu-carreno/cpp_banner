@@ -1,6 +1,5 @@
 #include "processInput.hpp"
 #include "processLetters.hpp"
-#include "abc.hpp"
 #include "utils.hpp"
 
 #include <iostream>
@@ -16,7 +15,7 @@ int main(){
 
   for(char letter : input){
     std::cout << letter << "\n";
-     PrintLetters(letter);
+     ProcessLetters(letter);
   }
 
   

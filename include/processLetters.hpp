@@ -7,7 +7,7 @@
 
 int SelectLetters(char letter);
 
-int PrintLetters(std::array <std::string, constants::rows_per_letter> letter);
+int PrintLetters(std::array <const std::string, constants::rows_per_letter> letter);
 
 int ProcessLetters(char letter);
 

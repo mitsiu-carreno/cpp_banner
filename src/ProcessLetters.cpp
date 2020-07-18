@@ -5,7 +5,7 @@
 #include <array>
 #include<string>
 
-std::array <std::string, constants::rows_per_letter> SelectLetters (char letter){
+std::array <const std::string, constants::rows_per_letter> SelectLetters (char letter){
 	switch (letter) {
 		case 'a':
 			return abc::letter_a;
@@ -19,12 +19,14 @@ std::array <std::string, constants::rows_per_letter> SelectLetters (char letter)
 		case 'o':
 			return abc::letter_o;
 			break;
+    default:
+      return abc::letter_a;
 	}
 
 }
 
 
-int PrintLetters(std::array <std::string, constants::rows_per_letter> letter ){
+int PrintLetters(std::array <const std::string, constants::rows_per_letter> letter ){
 	for (std::size_t i{0};i < letter.size();++i){
  	 std::cout<< letter[i]<<"\n";
 	}
@@ -35,5 +37,5 @@ int PrintLetters(std::array <std::string, constants::rows_per_letter> letter ){
 int ProcessLetters(char letter){
 
 	PrintLetters(SelectLetters(letter));
-
+  return 0;
 }
