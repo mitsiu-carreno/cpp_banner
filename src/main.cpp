@@ -15,11 +15,10 @@ int main(){
 
   for(char letter : input){
     std::cout << letter << "\n";
-    // PrintLetters(letter);
+     PrintLetters(letter);
   }
 
   
-  PrintLetters();
   
   return 0;
 }

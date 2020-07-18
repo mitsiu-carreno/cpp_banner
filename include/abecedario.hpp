@@ -1,6 +1,6 @@
 #ifndef PRINTLETTERS_H
 #define PRINTLETTERS_H
 
-int PrintLetters();
+int PrintLetters(char letter);
 
 #endif

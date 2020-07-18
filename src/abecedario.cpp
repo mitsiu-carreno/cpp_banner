@@ -36,36 +36,72 @@
 
 
 
-int PrintLetters (){
+int PrintLetters (char letter){
 	
-	std::array<std::string, constants::rows_per_letter> CustomCharTwo {
-		/*std::string first_line,
-		std::string second_line,
-		std::string third_line,
-		std::string fourth_line,
-		std::string fifth_line,
-		std::string sixth_line,
-		std::string seventh_line,
-		*/
-	};
-
-	std::array <std::string, constants::rows_per_letter> letra_a {
+	std::array <std::string, constants::rows_per_letter> select_letter {};
+	
+	std::array <std::string, constants::rows_per_letter> letter_a {
 		"             ",
 		"    ,-------,",
 		"   /  ___   /",
 		"  /  /  /  /",
-		" /   `-´  /",
+		" /   `-´ /",
 		" \\____;__;",
-		"           ",	
-
+		"           ",
+	};
+	
+	std::array <std::string, constants::rows_per_letter> letter_e {
+		"            ",
+	   	"    ,------,",
+	   	"   /  /_/  /",
+           	"  /  _____/",
+           	" /  /__,-,",
+           	"/_______/",
+	   	"         "
 	};
 
-	for (std::size_t i{0};i < letra_a.size();++i){
- 	 std::cout<< letra_a[i]<<"\n";
+	std::array <std::string, constants::rows_per_letter> letter_i {	
+      	       "     __", 
+     	       "    /_/", 
+               "   / /",
+               "  / /",
+               " / /",
+               "/_/",
+               "  ",
+	};
+
+	std::array <std::string, constants::rows_per_letter> letter_o {
+                "    ______",
+                "   / ___  \\",
+                "  / /  / /",
+                " / /  / /",
+                "/ /__/ /",
+                "\\_____/",
+                "      ",
+	};
+
+
+	switch (letter) {
+		case 'a':
+			select_letter=letter_a;
+			break;
+		case 'e':
+			select_letter=letter_e;
+			break;
+		case 'i':
+			select_letter=letter_i;
+			break;
+		case 'o':
+			select_letter=letter_o;
+			break;
 	}
 	
-	return 0; 
+	for (std::size_t i{0};i < select_letter.size();++i){
+ 	 std::cout<< select_letter[i]<<"\n";
 	}
+	return 0; 
+}
+
 
 /*
 
