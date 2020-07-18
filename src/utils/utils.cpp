@@ -23,7 +23,7 @@ namespace utils{
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__) 
   #include <windows.h>
 
-  namesapce utils{
+  namespace utils{
     int GetWindowLength(){
       CONSOLE_SCREEN_BUFFER_INFO csbi;
       int columns, rows;
