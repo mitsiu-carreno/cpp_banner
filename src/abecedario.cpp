@@ -40,45 +40,6 @@ int PrintLetters (char letter){
 	
 	std::array <std::string, constants::rows_per_letter> select_letter {};
 	
-	std::array <std::string, constants::rows_per_letter> letter_a {
-		"             ",
-		"    ,-------,",
-		"   /  ___   /",
-		"  /  /  /  /",
-		" /   `-´ /",
-		" \\____;__;",
-		"           ",
-	};
-	
-	std::array <std::string, constants::rows_per_letter> letter_e {
-		"            ",
-	   	"    ,------,",
-	   	"   /  /_/  /",
-           	"  /  _____/",
-           	" /  /__,-,",
-           	"/_______/",
-	   	"         "
-	};
-
-	std::array <std::string, constants::rows_per_letter> letter_i {	
-      	       "     __", 
-     	       "    /_/", 
-               "   / /",
-               "  / /",
-               " / /",
-               "/_/",
-               "  ",
-	};
-
-	std::array <std::string, constants::rows_per_letter> letter_o {
-                "    ______",
-                "   / ___  \\",
-                "  / /  / /",
-                " / /  / /",
-                "/ /__/ /",
-                "\\_____/",
-                "      ",
-	};
 
 
 	switch (letter) {
