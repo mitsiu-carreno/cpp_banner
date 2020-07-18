@@ -8,7 +8,7 @@
 namespace abc{
 
 
-	std::array <const std::string, constants::rows_per_letter> letter_a {
+	static std::array <const std::string, constants::rows_per_letter> letter_a {
 		"             ",
 		"    ,-------,",
 		"   /  ___   /",
@@ -18,7 +18,7 @@ namespace abc{
 		"           ",
 	};
 	
-	std::array <const std::string, constants::rows_per_letter> letter_e {
+	static std::array <const std::string, constants::rows_per_letter> letter_e {
 		"            ",
 	   	"    ,------,",
 	   	"   /  /_/  /",
@@ -28,7 +28,7 @@ namespace abc{
 	   	"         "
 	};
 
-	std::array <const std::string, constants::rows_per_letter> letter_i {	
+	static std::array <const std::string, constants::rows_per_letter> letter_i {	
       	       "     __", 
      	       "    /_/", 
                "   / /",
@@ -38,7 +38,7 @@ namespace abc{
                "  ",
 	};
 
-	std::array <const std::string, constants::rows_per_letter> letter_o {
+	static std::array <const std::string, constants::rows_per_letter> letter_o {
                 "    ______",
                 "   / ___  \\",
                 "  / /  / /",
