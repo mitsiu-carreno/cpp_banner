@@ -166,7 +166,8 @@ namespace ABC{
 		"  #+#+   #+#+ ",
 		"   #########  ",
 	};
-		static std::array <const std::string, constants::rows_per_letter> P {
+
+	static std::array <const std::string, constants::rows_per_letter> P {
 			" .......... ",
 			" ::::   ::::",
 			" :+:+   :+:+",
@@ -275,3 +276,5 @@ namespace ABC{
 		"   +#+#+#+#+#+",
 		"   ###########",
 	};
+
+#endif
