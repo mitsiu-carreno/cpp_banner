@@ -1,26 +1,39 @@
 #include "abc.hpp"
+#include "abc_mayus.hpp"
 #include "constants.hpp"
 #include "CustomChar.hpp"
-#include <iostream>
-#include <array>
+#include<iostream>
+#include<array>
 #include<string>
 
 std::array <const std::string, constants::rows_per_letter> SelectLetters (char letter){
 	switch (letter) {
 		case 'a':
-			return abc::letter_a;
+			return ABC::A;
+			break;
+		case 'b':
+			return ABC::B;
+			break;
+		case 'c':
+			return ABC::C;
+			break;
+		case 'd':
+			return ABD::D;
 			break;
 		case 'e':
-			return abc::letter_e;
+			return ABC::E;
+			break;
+		case 'f':
+			return ABC::F;
 			break;
 		case 'i':
-			return abc::letter_i;
+			return ABC::I;
 			break;
 		case 'o':
-			return abc::letter_o;
+			return ABC::O;
 			break;
     default:
-      return abc::letter_a;
+      return ABC::Z;
 	}
 
 }
