@@ -17,7 +17,7 @@
 
 namespace ABC{
 
-	static std::array <const std::string, constants::rows_per_letter> A {
+	std::array <std::string, constants::rows_per_letter> A {
 		"       .      ",
 	        "      :::     ",
 		"     :+ +:    ",
@@ -27,7 +27,7 @@ namespace ABC{
 		" ####     ####",
 	};
 	
-  static std::array <const std::string, constants::rows_per_letter> B {
+  std::array <std::string, constants::rows_per_letter> B {
 		" .......... ",
 		" ::::   ::::",
 		" :+:+   :+:+",

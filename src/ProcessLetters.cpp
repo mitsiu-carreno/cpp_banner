@@ -4,15 +4,16 @@
 #include "CustomChar.hpp"
 #include<iostream>
 #include<array>
+#include<vector>
 #include<string>
 
 std::array <const std::string, constants::rows_per_letter> SelectLetters (char letter){
 	switch (letter) {
 		case 'a':
-			return ABC::A;
+			return ABC::E;
 			break;
 		case 'b':
-			return ABC::B;
+			return ABC::E;
 			break;
 		case 'c':
 			return ABC::C;
@@ -94,8 +95,22 @@ std::array <const std::string, constants::rows_per_letter> SelectLetters (char l
 
 
 int PrintLetters(std::array <const std::string, constants::rows_per_letter> letter ){
+  //std::array<std::string, 7> letter;
+  // Variable que almacena nuestras letras (arreglos de strings)
+  std::vector<std::array<std::string,7>> line(2);
+  line[0] = ABC::A;
+  line[1] = ABC::B;
+
+
+  std::cout << "Line size: "<< line.size() << "\n";
+  std::cout << "Stylized char x-size: " << line[0][0].size() << "\n";
+  std::cout << "Stylized char y-size: " << line[0].size() << "\n";
+  
+
+  
+
 	for (std::size_t i{0};i < letter.size();++i){
- 	 std::cout<< letter[i]<<"\n";
+ 	 std::cout<< letter[i] << letter[i] <<"\n";
 	}
 	return 0;
 }
