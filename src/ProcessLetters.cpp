@@ -1,4 +1,4 @@
-#include "abc.hpp"
+//#include "abc.hpp"
 #include "abc_mayus.hpp"
 #include "constants.hpp"
 #include "CustomChar.hpp"
@@ -18,7 +18,7 @@ std::array <const std::string, constants::rows_per_letter> SelectLetters (char l
 			return ABC::C;
 			break;
 		case 'd':
-			return ABD::D;
+			return ABC::D;
 			break;
 		case 'e':
 			return ABC::E;
