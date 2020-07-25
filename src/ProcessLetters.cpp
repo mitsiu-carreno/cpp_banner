@@ -7,7 +7,7 @@
 #include<vector>
 #include<string>
 
-std::array <const std::string, constants::rows_per_letter> SelectLetters (char letter){
+std::array <std::string, constants::rows_per_letter> SelectLetters (char letter){
 	switch (letter) {
 		case 'a':
 			return ABC::A;
@@ -94,28 +94,16 @@ std::array <const std::string, constants::rows_per_letter> SelectLetters (char l
 }
 
 
-int PrintLetters(std::array <const std::string, constants::rows_per_letter> letter ){
+int PrintLetters(std::array <std::string, constants::rows_per_letter> letter ){
   
   // Variable que almacena nuestras letras (arreglos de strings) 
-  std::vector<std::array < const std::string,7>*> line(6);
-  line[0] = &ABC::R;
-  line[1] = &ABC::I;
-  line[2] = &ABC::N;
-  line[3] = &ABC::X;
-  line[4] = &ABC::L;
-  line[5] = &ABC::R;
+  std::vector<std::array <std::string,7>> line(2);
+  line[0] = ABC::A;
   
-  for(int x{0}; x<7; ++x){
-    for(int i{0}; i<6; ++i){
-
-        std::cout << (*line[i])[x];
-      }
-      std::cout << "\n";
-  }
   
-  //std::cout << **line[0][0];
-  //std::cout << "Stylized char x-size: " << *line[0][0] << "\n";
-  //std::cout << "Stylized char y-size: " << line[0]->size() << "\n";
+  std::cout << "Line size: " << 1 << "\n";
+  std::cout << "Stylized char x-size: " << 1 << "\n";
+  std::cout << "Stylized char y-size: " << 1 << "\n";
   
 
   
