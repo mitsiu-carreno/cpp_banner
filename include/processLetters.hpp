@@ -4,11 +4,13 @@
 #include "constants.hpp"
 #include<array>
 #include<string>
-
+#include<vector>
 int SelectLetters(char letter);
 
-int PrintLetters(std::array <const std::string, constants::rows_per_letter> letter);
+int PrintLetters(std::vector<std::array <std::string,constants::rows_per_letter>> line, int length);
 
-int ProcessLetters(char letter);
+int ProcessLetters(std::string input, int length);
+
+std::vector<std::array <std::string,constants::rows_per_letter>> SetRowLength (std::string input, int length);
 
 #endif
