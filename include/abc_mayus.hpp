@@ -27,7 +27,7 @@ namespace ABC{
 		" ####     ####",
 	};
 	
-  static std::array <std::string, constants::rows_per_letter> B {
+	static std::array <std::string, constants::rows_per_letter> B {
 		" .......... ",
 		" ::::   ::::",
 		" :+:+   :+:+",
@@ -168,74 +168,74 @@ namespace ABC{
 	};
 
 	static std::array <std::string, constants::rows_per_letter> P {
-			" .......... ",
-			" ::::   ::::",
-			" :+:+   :+:+",
-			" +:+:+:+:+: ",
-			" +#+#       ",
-			" #+#+       "
-			" ####       ",
+		" .......... ",
+		" ::::   ::::",
+		" :+:+   :+:+",
+		" +:+:+:+:+: ",
+		" +#+#       ",
+		" #+#+       ",
+		" ####       ",
+	};
+
+	static std::array <std::string, constants::rows_per_letter> Q {
+		"   .........  ",
+		"  ::::   :::: ",
+		" +:+:     :+:+",
+		" :+:+     +:+:",
+		" +#+# +#  #+#+",
+		"  #+#+  #+#+# ",
+		"   #########  ",
+	};
+
+	static std::array <std::string, constants::rows_per_letter> R {
+		" .......... ",
+		" ::::   ::::",
+		" :+:+   :+:+",
+		" +:+:+:+:+: ",
+		" +#+# #+#+  ",
+		" #+#+  #+#+ ",
+		" ####   ####",
+	};
+
+	static std::array <std::string, constants::rows_per_letter> S {
+		"   ........  ",
+		" ::::    ::: ",
+		" +:+:+       ",
+		"  :+:+:+:+:+ ",
+		"        +#+#+",
+		"  #+#    +#+#",
+		"   ########  ",
 		};
 
-		static std::array <std::string, constants::rows_per_letter> Q {
-			"   .........  ",
-			"  ::::   :::: ",
-			" +:+:     :+:+",
-			" :+:+     +:+:",
-			" +#+# +#  #+#+",
-			"  #+#+  #+#+# ",
-			"   #########  ",
-		};
+	static std::array <std::string, constants::rows_per_letter> T {
+		" ............",
+		" ::::::::::::",
+		"     :+:+    ",
+		"     +:+:    ",
+		"     +#+#    ",
+		"     #+#+    ",
+		"     ####    ",
+	};
 
-		static std::array <std::string, constants::rows_per_letter> R {
-			" .......... ",
-			" ::::   ::::",
-			" :+:+   :+:+",
-			" +:+:+:+:+: ",
-			" +#+# #+#+  ",
-			" #+#+  #+#+ ",
-			" ####   ####",
-		};
+	static std::array <std::string, constants::rows_per_letter> U {
+		" ....    ....",
+		" ::::    ::::",
+		" +:+:    +:+:",
+		" :+:+    :+:+",
+		" +#+#    #+#+",
+		"  #+#+  +#+# ",
+		"   ########  ",
+	};
 
-		static std::array <std::string, constants::rows_per_letter> S {
-			"   ........ ",
-			" ::::    ::: ",
-			" +:+:+       ",
-			"  :+:+:+:+:+ ",
-			"        +#+#+ ",
-			"  #+#    +#+# ",
-			"   ########   ",
-		};
-
-		static std::array <std::string, constants::rows_per_letter> T {
-			" ............",
-			" ::::::::::::",
-			"     :+:+    ",
-			"     +:+:    ",
-			"     +#+#    ",
-			"     #+#+    ",
-			"     ####    ",
-		};
-
-		static std::array <std::string, constants::rows_per_letter> U {
-			" ....    ....",
-			" ::::    ::::",
-			" +:+:    +:+:",
-			" :+:+    :+:+",
-			" +#+#    #+#+",
-			"  #+#+  +#+# ",
-			"   ########  ",
-		};
-
-		static std::array <std::string, constants::rows_per_letter> V {
-			"  ....    ....",
-			"  ::::    ::::",
-			"  +:+:    +:+:",
-			"  :+:+    :+:+",
-			"   #+#+  #+#+",
-			"     +#+#+#",
-			"      ####",
-		};
+	static std::array <std::string, constants::rows_per_letter> V {
+		"  ....    ....",
+		"  ::::    ::::",
+		"  +:+:    +:+:",
+		"  :+:+    :+:+",
+		"   #+#+  #+#+",
+		"     +#+#+#",
+		"      ####",
+	};
 
 	static std::array <std::string, constants::rows_per_letter> W {
 		" ...   ...   ...",
