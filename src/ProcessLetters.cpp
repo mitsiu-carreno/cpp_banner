@@ -110,13 +110,17 @@ int PrintLetters(std::vector<std::array <std::string,constants::rows_per_letter>
 //	}
 //
 
-	for(int l {0}; l < length ; ++l ){
-		for(int r {0}; r < 7 ; ++r ){
-				std::cout << line[l][r];
-				std::cout << std::endl;
-			        }
-	        }
+		for(int r {0}; r < constants::rows_per_letter ; ++r ){
+	    for(int l {0}; l < length ; ++l ){
 
+				std::cout << line[l][r];
+				//std::cout << std::endl;
+			}
+      std::cout << "\n";
+	  }
+
+    //line[0][0]  << line[0][1]
+    //line[][]  << line[][] 
 
   
 //  std::cout << "Line size: " << line.size() << "\n";
