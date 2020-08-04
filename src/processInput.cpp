@@ -38,4 +38,14 @@ namespace processInput{
     // All characters are valid
     return -1;
   }
+
+  int GetRowLength (std::string input){
+
+	size_t RowLength { input.size() };
+	
+	RowLength = static_cast<int>(RowLength);
+	
+	return RowLength;
+  }
+
 }

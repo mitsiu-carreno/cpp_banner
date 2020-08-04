@@ -2,9 +2,9 @@
 #define UTILS_H
 
 namespace utils{
-  bool InputCheck();
+	bool InputCheck();
 
-  int GetWindowLength();
+	int GetWindowLength();
 }
 
 #endif
