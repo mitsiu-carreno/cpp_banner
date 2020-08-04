@@ -22,6 +22,7 @@ namespace processInput{
     }
   }
 
+
   char InvalidCharacters(std::string &input){
   
     for(char &letter : input){
