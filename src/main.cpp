@@ -1,14 +1,22 @@
+#include "processInput.hpp"
+#include "processLetters.hpp"
+#include "utils.hpp"
 #include <iostream>
 #include <string>
 
+
 int main(){
+
+  std::string input {processInput::AskInput()};
+
+  std::cout << utils::GetWindowLength() << "\n";
   
-  std::string input {"aei"};
-  std::cout << &input << "\n";
+  int length { processInput::GetRowLength(input) };
   
-  for(char e : input){
-    std::cout << e << "\n";
-  }
-  
+  std::cout << length << "\n";
+
+  ProcessLetters(input, length);
+
   return 0;
 }
+
