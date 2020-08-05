@@ -43,8 +43,6 @@ namespace processInput{
 
 	size_t RowLength { input.size() };
 	
-	RowLength = static_cast<int>(RowLength);
-	
 	return RowLength;
   }
 
