@@ -26,7 +26,7 @@ namespace ABC{
 		"  #+#+#+#+#+# ",
 		" ####     ####",
 	};
-	
+
 	static std::array <std::string, constants::rows_per_letter> B {
 		" .......... ",
 		" ::::   ::::",
@@ -228,13 +228,13 @@ namespace ABC{
 	};
 
 	static std::array <std::string, constants::rows_per_letter> V {
-		"  ....    ....",
-		"  ::::    ::::",
-		"  +:+:    +:+:",
-		"  :+:+    :+:+",
-		"   #+#+  #+#+",
-		"     +#+#+#",
-		"      ####",
+		 " ....    ....",
+		 " ::::    ::::",
+		 " +:+:    +:+:",
+		 " :+:+    :+:+",
+		 "  #+#+  #+#+ ",
+		 "    +#+#+#   ",
+		 "     ####    ",
 	};
 
 	static std::array <std::string, constants::rows_per_letter> W {
@@ -243,8 +243,8 @@ namespace ABC{
 		" :+:   +:+   :+:",
 		" +:+   :+:   +:+",
 		" +#+   #+#   +#+",
-		"   +#+#+ +#+#+",
-		"    ###   ###",
+		"   +#+#+ +#+#+  ",
+		"    ###   ###   ",
 	};
 
 	static std::array <std::string, constants::rows_per_letter> X {
@@ -268,23 +268,23 @@ namespace ABC{
 	};
 
 	static std::array <std::string, constants::rows_per_letter> Z {
-		"   ...........",
-		"   :::::::::::",
-		"         :+:+",
-		"       :+:+",
-		"     #+#+",
-		"   +#+#+#+#+#+",
-		"   ###########",
+		" ...........",
+		" :::::::::::",
+		"       :+:+ ",
+		"      :+:+  ",
+		"    #+#+    ",
+		" +#+#+#+#+#+",
+		" ###########",
 	};
 
 	static std::array <std::string, constants::rows_per_letter> SPCE {
-	         "              ",
-                 "              ",
-                 "              ",
-                 "              ",
-                 "              ",
-                 "              ",
-                 "              ",	
+	         "             ",
+           "             ",
+           "             ",
+           "             ",
+           "             ",
+           "             ",
+           "             ",	
 	};
 }
 
