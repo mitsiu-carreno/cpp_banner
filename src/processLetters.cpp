@@ -5,43 +5,6 @@
 #include<array>
 #include<vector>
 #include<string>
-#include vector
-
-
-void Process_line (std::vector<char> &sentence_char, std::string input){
-	for(size_t i {0}; i<input.size(); ++i)
-	sentence_char[i]=input[i];
-
-	// hacer arreglo de arreglos, donde en lugar de guardar el carácter guardo el arreglo de líneas 
-}
-
-void Print_line (char letter, std::string input){
-	std::vector<char> sentence_char (input.size());
-	Process_line (sentence_char,input);
-	for (size_t i{0};i<input.size(); ++i){
-
-		//hola 
-	//1er ciclo posición por posición en el input 
-		//cuando la posición1 (h)== character x , imprimir linea 1 del caracter x
-		//cuando la posición 2 (o)== character x , imprimir linea 1 del caracter x
-		//cuando la posición 3 (l)== character x , imprimir linea 1 del caracter x
-		//cuando la posición 4 (a)== character x , imprimir linea 1 del caracter x + salto de línea
-
-		//cuando la posición1 (h)== character x , imprimir linea 2 del caracter x
-		//cuando la posición 2 (o)== character x , imprimir linea 2 del caracter x
-		//cuando la posición 3 (l)== character x , imprimir linea 2 del caracter x
-		//cuando la posición 4 (a)== character x , imprimir linea 2 del caracter x + salto de línea
-
-	}
-}
-
-
-int ProcessLetters(char letter){
-
-	PrintLetters(SelectLetters(letter));
-  return 0;
-}
-
 
 std::array <std::string, constants::rows_per_letter> SelectLetters (char letter){
 	switch (letter) {
@@ -135,31 +98,16 @@ std::array <std::string, constants::rows_per_letter> SelectLetters (char letter)
 
 
 int PrintLetters(std::vector<std::array <std::string,constants::rows_per_letter>> line, int length){
-	// Variable que almacena nuestras letras (arreglos de strings)	std::vector<std::array <std::string,7>> line(4);
-	
 
-
-//	for(int l {0}; l <= length; ++l){
-//		for(int r {0}; r <=  static_cast<int>(line[l][r].size() )  ; ++r){
-//			std::cout << line[l][r];
-//			std::cout << line[l+1][r]<<"\n";
-//		}
-//	}
-//
-
-		for(int r {0}; r < constants::rows_per_letter ; ++r ){
-	    for(int l {0}; l < length ; ++l ){
+	for(int r {0}; r < constants::rows_per_letter ; ++r ){
+		for(int l {0}; l < length ; ++l ){
 
 				std::cout << line[l][r];
-				//std::cout << std::endl;
-			}
-      std::cout << "\n";
-	  }
 
-    //line[0][0]  << line[0][1]
-    //line[][]  << line[][] 
+		}
+		std::cout << "\n";
+	}
 
-  
 //  std::cout << "Line size: " << line.size() << "\n";
 //  std::cout << "Stylized char x-size: " << line[0].size() << "\n";
 //  std::cout << "Stylized char y-size: " << line[0][1].size() << "\n";
@@ -174,11 +122,12 @@ int PrintLetters(std::vector<std::array <std::string,constants::rows_per_letter>
 	return 0;
 }
 
-std::vector<std::array <std::string,constants::rows_per_letter>> SetRowLength (std::string input, int length){ 
+std::vector<std::array <std::string,constants::rows_per_letter>> SetRowLength (std::string input, int length){
+
 	std::vector<std::array <std::string,constants::rows_per_letter>> line(length);
-	
+
 	int i {0};
-	
+
 	for(char letter : input){
 		line[i] = SelectLetters(letter);
 		++i;
@@ -186,13 +135,9 @@ std::vector<std::array <std::string,constants::rows_per_letter>> SetRowLength (s
 	return line;
 }
 
-<<<<<<< HEAD
-=======
-
 int ProcessLetters(std::string input, int length){
-	
+
 	 PrintLetters(SetRowLength(input, length), length);
-	
+
 	return 0;
 }
->>>>>>> e2b655469db20cf22ffa6f139a055565b2ff625f
