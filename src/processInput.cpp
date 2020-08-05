@@ -1,6 +1,7 @@
 #include "processInput.hpp"
 #include <string>
 #include <iostream>
+#include "utils.hpp"
 
 namespace processInput{
 
@@ -46,4 +47,9 @@ namespace processInput{
 	return RowLength;
   }
 
+  int GetCharsPerRow ( int lenght ){
+    int CharsPerRow { utils::GetWindowLength()/13};
+    //int TotalRows {CharsPerRow/lenght};
+    return CharsPerRow;
+  }
 }
