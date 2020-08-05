@@ -18,8 +18,8 @@
 namespace ABC{
 
 	static std::array <std::string, constants::rows_per_letter> A {
-		"       .      ",
-	        "      :::     ",
+		["       .      "],
+	    "      :::     ",
 		"     :+ +:    ",
 		"    +:+ +:+   ",
 		"   +#+   +#+  ",
