@@ -48,7 +48,7 @@ namespace processInput{
   }
 
   int GetCharsPerRow ( int lenght ){
-    int CharsPerRow { utils::GetWindowLength()/13};
+    int CharsPerRow { utils::GetWindowLength()/14};
     //int TotalRows {CharsPerRow/lenght};
     return CharsPerRow;
   }
