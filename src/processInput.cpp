@@ -41,9 +41,7 @@ namespace processInput{
   }
 
   int GetRowLength (std::string input){
-
-	size_t RowLength { input.size() };
-	
+	size_t RowLength { input.size() };	
 	return RowLength;
   }
 
@@ -51,5 +49,13 @@ namespace processInput{
     int CharsPerRow { utils::GetWindowLength()/13};
     //int TotalRows {CharsPerRow/lenght};
     return CharsPerRow;
+  }
+
+bool CheckWindowLength(int window_lenght){
+   if(window_lenght <= 49){
+	   return false;
+   }else{
+	   return true;
+   }
   }
 }

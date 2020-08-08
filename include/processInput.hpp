@@ -8,6 +8,7 @@ namespace processInput{
   char InvalidCharacters(std::string &input);
   int GetRowLength(std::string input);
   int GetCharsPerRow ( int lenght );
+  bool CheckWindowLength (int window_lenght);
 }
 
 #endif
