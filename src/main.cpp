@@ -19,7 +19,7 @@ int main(){
 
   std::cout<< "En la ventana caben "<<chars_per_row<<"\n";
 
-  ProcessLetters(input, length);
+  ProcessLetters(input, chars_per_row);
 
   return 0;
 }

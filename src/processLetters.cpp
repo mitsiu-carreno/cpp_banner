@@ -122,22 +122,34 @@ int PrintLetters(std::vector<std::array <std::string,constants::rows_per_letter>
 	return 0;
 }
 
-std::vector<std::array <std::string,constants::rows_per_letter>> SetRowLength (std::string input, int length){
+std::vector<std::array <std::string,constants::rows_per_letter>> SetRowLength (std::string input, int length, int last_char_position){
 
 	std::vector<std::array <std::string,constants::rows_per_letter>> line(length);
-
+  /*
 	int i {0};
 
 	for(char letter : input){
 		line[i] = SelectLetters(letter);
 		++i;
 	}
+  */
+  for(int i{last_char_position}; i < (last_char_position + length); ++i){
+    std::cout << "debug" << input[i] << "\n";
+    line[i] = SelectLetters(input[i]);
+  }
+
 	return line;
 }
 
 int ProcessLetters(std::string input, int length){
+  int last_char_position = 0;
+  for(int renglon {0}; renglon < 2; ++renglon){ 
+    std::vector<std::array <std::string, constants::rows_per_letter>> line;
+    line = SetRowLength(input, length, last_char_position);
 
-	 PrintLetters(SetRowLength(input, length), length);
+	  PrintLetters(line, length);
 
+    last_char_position = last_char_position + length;
+  }
 	return 0;
 }
