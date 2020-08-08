@@ -1,10 +1,12 @@
 #include "abc_mayus.hpp"
 #include "constants.hpp"
 #include "CustomChar.hpp"
+#include "processInput.hpp"
 #include<iostream>
 #include<array>
 #include<vector>
 #include<string>
+#include <cmath>
 
 std::array <std::string, constants::rows_per_letter> SelectLetters (char letter){
 	switch (letter) {
@@ -133,9 +135,8 @@ std::vector<std::array <std::string,constants::rows_per_letter>> SetRowLength (s
 		++i;
 	}
   */
-  for(int i{last_char_position}; i < (last_char_position + length); ++i){
-    std::cout << "debug" << input[i] << "\n";
-    line[i] = SelectLetters(input[i]);
+  for(int i{last_char_position}, line_i {0}; i < (last_char_position + length); ++i, ++line_i){
+    line[line_i] = SelectLetters(input[i]);
   }
 
 	return line;
@@ -143,11 +144,13 @@ std::vector<std::array <std::string,constants::rows_per_letter>> SetRowLength (s
 
 int ProcessLetters(std::string input, int length){
   int last_char_position = 0;
-  for(int renglon {0}; renglon < 2; ++renglon){ 
-    std::vector<std::array <std::string, constants::rows_per_letter>> line;
+  for(int renglon {0}; renglon < ceil(input.size()/static_cast<float>(length)); ++renglon){ 
+    std::vector<std::array <std::string, constants::rows_per_letter>> line(length);
+    
     line = SetRowLength(input, length, last_char_position);
 
 	  PrintLetters(line, length);
+    std::cout << "\n";
 
     last_char_position = last_char_position + length;
   }
