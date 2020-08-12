@@ -19,10 +19,6 @@ int main(){
 	
 	std::cout<< "En la ventana caben "<<chars_per_row<<"\n";
 
-  if(static_cast<int>(input.size()) < chars_per_row){
-    chars_per_row = static_cast<int>(input.size());
-  }  
-
 	ProcessLetters(input, chars_per_row);
 	
 	return 0;

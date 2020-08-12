@@ -142,17 +142,33 @@ std::vector<std::array <std::string,constants::rows_per_letter>> FillRow (std::s
 	return line;
 }
 
+int GetCurrentLineLength(int remain_input_size, int chars_per_row){
+  int line_length = chars_per_row;
+  if(remain_input_size < chars_per_row){
+    line_length = remain_input_size;
+  }else{
+    line_length = chars_per_row;
+  }
+  return line_length;
+}
+
 void ProcessLetters(std::string input, int chars_per_row){
   int last_char_position = 0;
   for(int renglon {0}; renglon < ceil(input.size()/static_cast<float>(chars_per_row)); ++renglon){ 
-    std::vector<std::array <std::string, constants::rows_per_letter>> line(chars_per_row);
+    int remain_input_size = static_cast<int>(input.size()) - last_char_position;
+
+    std::cout << "remaining chars : " << remain_input_size << "\n";
+
+    int chars_per_current_row = GetCurrentLineLength(remain_input_size, chars_per_row); 
+
+    std::vector<std::array <std::string, constants::rows_per_letter>> line(chars_per_current_row);
     
 
-    line = FillRow(input, chars_per_row, last_char_position);
+    line = FillRow(input, chars_per_current_row, last_char_position);
 
-	  PrintLetters(line, chars_per_row);
+	  PrintLetters(line, chars_per_current_row);
     std::cout << "\n";
 
-    last_char_position = last_char_position + chars_per_row;
+    last_char_position = last_char_position + chars_per_current_row;
   }
 }
