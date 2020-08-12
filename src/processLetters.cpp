@@ -127,7 +127,7 @@ int PrintLetters(std::vector<std::array <std::string,constants::rows_per_letter>
 std::vector<std::array <std::string,constants::rows_per_letter>> FillRow (std::string input, int chars_per_row, int last_char_position){
 
   int line_length {chars_per_row};
-  if(input.size() < chars_per_row){
+  if(static_cast<int>(input.size()) < chars_per_row){
     line_length = input.size();
   }
 	std::vector<std::array <std::string,constants::rows_per_letter>> line(line_length);
