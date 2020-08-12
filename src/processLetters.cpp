@@ -157,7 +157,7 @@ void ProcessLetters(std::string input, int chars_per_row){
   for(int renglon {0}; renglon < ceil(input.size()/static_cast<float>(chars_per_row)); ++renglon){ 
     int remain_input_size = static_cast<int>(input.size()) - last_char_position;
 
-    std::cout << "remaining chars : " << remain_input_size << "\n";
+    // std::cout << "remaining chars : " << remain_input_size << "\n";
 
     int chars_per_current_row = GetCurrentLineLength(remain_input_size, chars_per_row); 
 
