@@ -99,12 +99,12 @@ std::array <std::string, constants::rows_per_letter> SelectLetters (char letter)
 
 
 
-int PrintLetters(std::vector<std::array <std::string,constants::rows_per_letter>> line, int length){
+int PrintLetters(std::vector<std::array <std::string,constants::rows_per_letter>> line, int chars_per_row){
 
-	for(int r {0}; r < constants::rows_per_letter ; ++r ){
-		for(int l {0}; l < length ; ++l ){
+	for(int row {0}; row < constants::rows_per_letter ; ++row ){
+		for(int letter {0}; letter < chars_per_row ; ++letter ){
 
-				std::cout << line[l][r];
+				std::cout << line[letter][row];
 
 		}
 		std::cout << "\n";
@@ -124,9 +124,13 @@ int PrintLetters(std::vector<std::array <std::string,constants::rows_per_letter>
 	return 0;
 }
 
-std::vector<std::array <std::string,constants::rows_per_letter>> SetRowLength (std::string input, int length, int last_char_position){
+std::vector<std::array <std::string,constants::rows_per_letter>> FillRow (std::string input, int chars_per_row, int last_char_position){
 
-	std::vector<std::array <std::string,constants::rows_per_letter>> line(length);
+  int line_length {chars_per_row};
+  if(input.size() < chars_per_row){
+    line_length = input.size();
+  }
+	std::vector<std::array <std::string,constants::rows_per_letter>> line(line_length);
   /*
 	int i {0};
 
@@ -135,24 +139,24 @@ std::vector<std::array <std::string,constants::rows_per_letter>> SetRowLength (s
 		++i;
 	}
   */
-  for(int i{last_char_position}, line_i {0}; i < (last_char_position + length); ++i, ++line_i){
+  for(int i{last_char_position}, line_i {0}; i < (last_char_position + chars_per_row); ++i, ++line_i){
     line[line_i] = SelectLetters(input[i]);
   }
 
 	return line;
 }
 
-int ProcessLetters(std::string input, int length){
+void ProcessLetters(std::string input, int chars_per_row){
   int last_char_position = 0;
-  for(int renglon {0}; renglon < ceil(input.size()/static_cast<float>(length)); ++renglon){ 
-    std::vector<std::array <std::string, constants::rows_per_letter>> line(length);
+  for(int renglon {0}; renglon < ceil(input.size()/static_cast<float>(chars_per_row)); ++renglon){ 
+    std::vector<std::array <std::string, constants::rows_per_letter>> line(chars_per_row);
     
-    line = SetRowLength(input, length, last_char_position);
 
-	  PrintLetters(line, length);
+    line = FillRow(input, chars_per_row, last_char_position);
+
+	  PrintLetters(line, chars_per_row);
     std::cout << "\n";
 
-    last_char_position = last_char_position + length;
+    last_char_position = last_char_position + chars_per_row;
   }
-	return 0;
 }

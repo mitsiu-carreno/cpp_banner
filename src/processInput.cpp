@@ -40,10 +40,12 @@ namespace processInput{
     return -1;
   }
 
+  /*
   int GetRowLength (std::string input){
 	size_t RowLength { input.size() };	
 	return RowLength;
   }
+  */
 
   int GetCharsPerRow ( int lenght ){
     int CharsPerRow { utils::GetWindowLength()/14};

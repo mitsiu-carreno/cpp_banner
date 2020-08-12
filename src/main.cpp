@@ -5,14 +5,15 @@
 #include <string>
 
 int main(){
-	
+  //VerifMinWindow
 	if(!processInput::CheckWindowLength(utils::GetWindowLength())){
 		std::cout << "Por favor amplia el tamaño de tu ventana... \n";
 	}
 	
 	std::string input {processInput::AskInput()};
-	
-	int length { processInput::GetRowLength(input) };
+
+  int length = input.size();  
+	//int length { processInput::GetRowLength(input) };
 	
 	int chars_per_row {processInput::GetCharsPerRow (length)};
 	
