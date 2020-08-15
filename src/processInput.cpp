@@ -23,9 +23,27 @@ namespace processInput{
     }
   }
 
+  bool AskItalic(){
+    std::string input{};
 
-  char InvalidCharacters(std::string &input){
-  
+    while(true){
+      std::cout << "Formato cursiva: [y/n]: ";
+      std::getline(std::cin, input);
+
+      if(input == "y" || input == "yes" || input == "YES" || input == "Yes"){
+        return true;
+      }else if (input == "n" || input == "no" || input == "NO" || input == "No"){
+        return false;
+      }else{
+        std::cout << "Respuesta no valida por favor ingresa \"y\" o \"n\"\n";
+      }
+    }
+  }
+
+      char
+      InvalidCharacters(std::string &input)
+  {
+
     for(char &letter : input){
       if(letter >= 'A' && letter <= 'Z'){
         // Turn uppercase letter to lowercase

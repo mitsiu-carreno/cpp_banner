@@ -142,7 +142,7 @@ int GetCurrentLineLength(int remain_input_size, int chars_per_row){
   return line_length;
 }
 
-void ProcessLetters(std::string input, int chars_per_row){
+void ProcessLetters(std::string input, int chars_per_row, bool isItalic){
   int last_char_position = 0;
   for(int renglon {0}; renglon < ceil(input.size()/static_cast<float>(chars_per_row)); ++renglon){ 
     int remain_input_size = static_cast<int>(input.size()) - last_char_position;

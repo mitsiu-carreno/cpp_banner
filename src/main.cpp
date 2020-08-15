@@ -10,6 +10,15 @@ int main(){
 		std::cout << "Por favor amplia el tamaño de tu ventana... \n";
 	}
 	
+	bool isItalic {processInput::AskItalic()};
+	/*
+	if(isItalic){
+		std::cout << "Is italic\n";
+	}else{
+		std::cout << "Not italic\n";
+	}
+	*/
+	
 	std::string input {processInput::AskInput()};
 
   int length = input.size();  
@@ -19,7 +28,7 @@ int main(){
 	
 	std::cout<< "En la ventana caben "<<chars_per_row<<"\n";
 
-	ProcessLetters(input, chars_per_row);
+	ProcessLetters(input, chars_per_row, isItalic);
 	
 	return 0;
 }

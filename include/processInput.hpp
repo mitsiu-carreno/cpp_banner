@@ -5,6 +5,7 @@
 
 namespace processInput{
   std::string AskInput();
+  bool AskItalic(); 
   char InvalidCharacters(std::string &input);
   int GetRowLength(std::string input);
   int GetCharsPerRow ( int lenght );
