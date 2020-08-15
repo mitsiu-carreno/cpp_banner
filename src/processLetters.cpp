@@ -1,6 +1,5 @@
 #include "abc_mayus.hpp"
 #include "constants.hpp"
-#include "CustomChar.hpp"
 #include "processInput.hpp"
 #include<iostream>
 #include<array>
