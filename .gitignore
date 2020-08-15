@@ -5,3 +5,4 @@ bin/*
 vs_sln/*
 .vs/*
 *.swp
+.vscode/*

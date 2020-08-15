@@ -99,47 +99,37 @@ std::array <std::string, constants::rows_per_letter> SelectLetters (char letter)
 
 
 
-int PrintLetters(std::vector<std::array <std::string,constants::rows_per_letter>> line, int chars_per_row){
+void PrintLetters(std::vector<std::array <std::string,constants::rows_per_letter>> &ref_line, int chars_per_row){
 
 	for(int row {0}; row < constants::rows_per_letter ; ++row ){
-		for(int letter {0}; letter < chars_per_row ; ++letter ){
+		for(size_t letter {0}; letter < ref_line.size() ; ++letter ){
 
-				std::cout << line[letter][row];
+				std::cout << ref_line[letter][row];
 
 		}
 		std::cout << "\n";
 	}
 
-//  std::cout << "Line size: " << line.size() << "\n";
-//  std::cout << "Stylized char x-size: " << line[0].size() << "\n";
-//  std::cout << "Stylized char y-size: " << line[0][1].size() << "\n";
-//  std::cout << line[0][0] << line[1][0] << "\n";
-//  std::cout << line[0][1] << line[1][1] << "\n";
-//  std::cout << line[0][2] << line[1][2] << "\n";
-//  std::cout << line[0][3] << line[1][3] << "\n";
-//  std::cout << line[0][4] << line[1][4] << "\n";
-//  std::cout << line[0][5] << line[1][5] << "\n";
-//  std::cout << line[0][6] << line[1][6] << "\n";
+//  std::cout << "Line size: " << ref_line.size() << "\n";
+//  std::cout << "Stylized char x-size: " << ref_line[0].size() << "\n";
+//  std::cout << "Stylized char y-size: " << ref_line[0][1].size() << "\n";
+//  std::cout << ref_line[0][0] << ref_line[1][0] << "\n";
+//  std::cout << ref_line[0][1] << ref_line[1][1] << "\n";
+//  std::cout << ref_line[0][2] << ref_line[1][2] << "\n";
+//  std::cout << ref_line[0][3] << ref_line[1][3] << "\n";
+//  std::cout << ref_line[0][4] << ref_line[1][4] << "\n";
+//  std::cout << ref_line[0][5] << ref_line[1][5] << "\n";
+//  std::cout << ref_line[0][6] << ref_line[1][6] << "\n";
 
-	return 0;
 }
 
-std::vector<std::array <std::string,constants::rows_per_letter>> FillRow (std::string input, int chars_per_row, int last_char_position){
 
-	std::vector<std::array <std::string,constants::rows_per_letter>> line(chars_per_row);
-  /*
-	int i {0};
+void FillRow (std::string input, int last_char_position, std::vector<std::array<std::string, constants::rows_per_letter>> *ptr_line){
 
-	for(char letter : input){
-		line[i] = SelectLetters(letter);
-		++i;
+	for (int i{last_char_position}, line_i{0}; i < (last_char_position + static_cast<int>((*ptr_line).size())); ++i, ++line_i)	
+	{
+		(*ptr_line)[line_i] = SelectLetters(input[i]);
 	}
-  */
-  for(int i{last_char_position}, line_i {0}; i < (last_char_position + chars_per_row); ++i, ++line_i){
-    line[line_i] = SelectLetters(input[i]);
-  }
-
-	return line;
 }
 
 int GetCurrentLineLength(int remain_input_size, int chars_per_row){
@@ -162,11 +152,10 @@ void ProcessLetters(std::string input, int chars_per_row){
     int chars_per_current_row = GetCurrentLineLength(remain_input_size, chars_per_row); 
 
     std::vector<std::array <std::string, constants::rows_per_letter>> line(chars_per_current_row);
-    
 
-    line = FillRow(input, chars_per_current_row, last_char_position);
+		FillRow(input, last_char_position, &line);
 
-	  PrintLetters(line, chars_per_current_row);
+		PrintLetters(line, chars_per_current_row);
     std::cout << "\n";
 
     last_char_position = last_char_position + chars_per_current_row;
